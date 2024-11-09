@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get an Intervention</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <!-- <h1>GET AN <span>INTERVENTION</span></h1> -->
+          <img src="./Public/Images/heading.png" alt="" class="heading">
+        </div>
+         
+        <div class="nav-child">
+            <ul>
+            <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+              </ul>
+              <div class="contact-number">
+                CALL NOW FOR A CONSULT <span>123.456.7890</span>
+              </div>
+        </div>
+
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+          <h1>GET AN <span>INTERVENTION</span></h1>
+          <p>Showing greater respect to older adults can be done in several ways: acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Business Email" required>
+            <input type="text" placeholder="Company" required>
+            <select required>
+              <option value="">Country</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <!-- Add more countries as needed -->
+            </select>
+            <button type="submit">Submit</button>
+        </div>
+          <svg width="1440" height="90" viewBox="0 0 1440 87" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto; color:#F5F5F5" class="pc">
+            <path d="M0 55.1705C310 -118.33 926 184.67 1440 55.1705V89.1704H0V55.1705Z" fill="#F5F5F5"/>
+          </svg>
+
+        <svg width="1440" height="111" viewBox="0 0 1440 111" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto;" class="pc">
+            <path d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z" fill="#F5F5F5" fill-opacity="0.3"/>
+            <path d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z" fill="#F5F5F5" fill-opacity="0.3"/>
+        </svg>
+          
+          <svg width="768" height="111" viewBox="0 0 768 111" fill="none" xmlns="http://www.w3.org/2000/svg"  style="position: absolute; bottom: -20px; left: 0; width: 100%; height: auto;" class="tab">
+            <mask id="mask0_1_327" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="768" height="111">
+            <rect width="768" height="111" transform="matrix(-1 0 0 1 768 0)" fill="#C4C4C4"/>
+            </mask>
+            <g mask="url(#mask0_1_327)">
+            <path d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z" fill="#F5F5F5" fill-opacity="0.3"/>
+            <path d="M0 77.1705C310 -96.3296 926 206.67 1440 77.1705V111.17H0V77.1705Z" fill="#F5F5F5"/>
+            </g>
+          </svg>
+          
+    </section>
+    
+    <section>
+        <div class="container">
+           <!-- Image section -->
+           <div class="image-section">
+              <img src="./Public/Images/couple.png" alt="Image 1">
+              <img src="./Public/Images/couple2.png" alt="Image 2">
+              <img src="./Public/Images/couple3.png" alt="Image 3">
+           </div>
+           <!-- Text section -->
+           <h2 class="text-Section-Heading">WE <span>UNDERSTAND</span></h2>
+           <div class="text-section">
+              <div class="text-box">
+                 <p>Older adults want to play active and meaningful roles in their lives, including as part of a social network, a neighborhood, and a community. Service providers and policymakers must consider that a lack of sense of purpose can become problematic as people age. Engaging them in leisure activities and volunteer work is important.</p>
+              </div>
+              <div class="text-box">
+                 <p>Older adults want to stay active and contribute to society in a reciprocal manner (meaning that they want to exchange their services and skills with others for the mutual benefit of the neighborhood or community). Qualitative and quantitative studies published from 2005 to 2016 examining the social needs of older adults were eligible for inclusion.</p>
+              </div>
+              <div class="text-box third">
+                 <p>To stimulate social contacts, neighborhood initiatives can be developed. Social meeting places, such as pubs and churches can help to foster the development of close and peripheral relationships.</p>
+              <div class="success-rate">
+                <span>92% Success Rate →</span>
+              </div>
+              </div>
+           </div>
+           <!-- Testimonial section -->
+           <div class="caraousel-container">
+              <img src="./Public/Images/person2.png" alt="Person 1" class="image2">
+              <div class="arrow-container">
+                 <button onclick="changeSlide(-1)" class="arrow">&#10094;</button>
+              </div>
+              <div class="carousel">
+                 <div>
+                    <div class="slides" id="carouselSlides"></div>
+                    <div class="dots" id="carouselDots"></div>
+                 </div>
+              </div>
+              <div class="arrow-container">
+                <button onclick="changeSlide(1)" class="arrow">&#10095;</button>
+             </div>
+           </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <!-- Text section -->
+            <h2 class="text-Section-Heading">WE <span>CAN ORGANIZE EVERYTHING</span></h2>
+            <div class="text-box visible">
+                <p><span>Interventions</span> should focus on older adult’s desire for connectedness, participation and independence.</p>
+            </div>
+            <div class="text-section">
+                <div class="text-box hide">
+                    <p><span>Interventions</span> should focus on older adult’s desire for connectedness, participation and independence.</p>
+                </div>
+                <div class="text-box">
+                    <p>Loneliness and social isolation are growing public health concerns in our aging society. Whilst these experiences occur across the life span, 50% of individuals aged over 60 are at risk of social isolation and one-third will experience
+                        some degree of loneliness later in life. It is vital to reduce loneliness and social isolation among older adults.</p>
+                </div>
+                <div class="text-box">
+                    <p>The methodology framework proposed by Arskey and O’Malley and further developed by Levac, et al. was used to guide the scoping review process. A total of 33 reviews met the inclusion criteria, evaluating a range of interventions targeted
+                        at older people residing in the community or institutionalised settings.</p>
+                </div>
+            </div>
+    
+            <div class="grid" id="serviceGrid">
+            </div>
+        </div>
+    
+        <div class="video-section">
+            <svg width="768" height="673" viewBox="0 0 768 673" fill="none" xmlns="http://www.w3.org/2000/svg"style="color:##305D52">
+                <path d="M768 0L768 641.551C443.259 566.258 384.593 740.902 -2.80431e-05 641.551L0 -3.35703e-05L768 0Z" fill="white" fill-opacity="0.2"/>
+             </svg>
+            <div class="video-text">
+                <h2>WATCH <span>THE VIDEO</span></h2>
+                <ul>
+                    <li>
+                        <div>
+                            <h3>Needs Assessment</h3>
+                            <p>The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the Consumer Voices for Coverage program.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Insurance Advocacy</h3>
+                            <p>We are committed to advocating for appropriate coverage and payment policies.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Treatment Planning & Placement</h3>
+                            <p>Patients can better understand medical procedures, discharge instructions, etc.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="video-container">
+                <img src="https://via.placeholder.com/600x400" alt="Video Thumbnail">
+                <div class="play-button" onclick="openVideo()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    
+        <!-- <div class="video-overlay" id="videoOverlay">
+            <div class="close-overlay" onclick="closeVideo()">×</div> -->
+            <!-- <video controls id="videoPlayer"> -->
+                <!-- <source src="your-video-url.mp4" type="video/mp4"> Your browser does not support the video tag. -->
+            <!-- </video> -->
+        <!-- </div> -->
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
