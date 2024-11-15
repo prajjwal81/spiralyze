@@ -195,27 +195,101 @@ services.forEach((service) => {
 //   document.getElementById("videoPlayer").currentTime = 0;
 // }
 
-const inputField = document.getElementById('inputField');
-const inputContainer = document.getElementById('inputContainer');
+// const inputField = document.getElementById('inputField');
+// const inputContainer = document.getElementById('inputContainer');
 
-inputField.addEventListener('click', () => {
-    inputField.classList.add('clicked');
-});
+// inputField.addEventListener('click', () => {
+//   inputField.classList.add('clicked');
+// });
 
-inputField.addEventListener('input', () => {
-    if (inputField.value.trim() === '') {
-        inputContainer.classList.add('error');
-        inputField.classList.add('input-error');
-    } else {
-        inputContainer.classList.remove('error');
-        inputField.classList.remove('input-error');
+// inputField.addEventListener('input', () => {
+//   if (inputField.value.trim() === '') {
+//     inputContainer.classList.add('error');
+//     inputField.classList.add('input-error');
+//   } else {
+//     inputContainer.classList.remove('error');
+//     inputField.classList.remove('input-error');
+//   }
+// });
+
+// inputField.addEventListener('blur', () => {
+//   if (inputField.value.trim() === '') {
+//     inputContainer.classList.add('error');
+//     inputField.classList.add('input-error');
+//     inputField.classList.remove('clicked'); // Reset to remove label floating if empty
+//   }
+// // });
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('.form-group input, .form-group select');
+
+  inputs.forEach((input) => {
+    // Initialize filled class based on the initial value
+    if (input.value) {
+      input.classList.add('filled');
     }
+
+    // Add event listeners to toggle filled class dynamically
+    input.addEventListener('input', () => {
+      input.classList.toggle('filled', input.value !== '');
+    });
+    input.addEventListener('blur', () => {
+      input.classList.toggle('filled', input.value !== '');
+    });
+    input.addEventListener('focus', () => {
+      input.classList.add('filled');
+    });
+  });
 });
 
-inputField.addEventListener('blur', () => {
-    if (inputField.value.trim() === '') {
-        inputContainer.classList.add('error');
-        inputField.classList.add('input-error');
-        inputField.classList.remove('clicked'); // Reset to remove label floating if empty
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const inputs = form.querySelectorAll('input, select');
+
+  form.addEventListener('submit', (event) => {
+    let formIsValid = true; // Flag to check if the form is valid
+
+    inputs.forEach((input) => {
+      const errorDiv = input.closest('.form-group').querySelector('.error-message');
+
+      // Check if input is empty
+      if (input.value.trim() === '') {
+        errorDiv.textContent = `${input.labels[0].textContent} is required.`;
+        errorDiv.style.display = 'block';
+        input.classList.add('input-error');
+        formIsValid = false;
+      } else {
+        errorDiv.textContent = '';
+        errorDiv.style.display = 'none';
+        input.classList.remove('input-error');
+      }
+
+      // Add 'filled' class to input for label floating effect
+      if (input.value.trim()) {
+        input.classList.add('filled');
+      } else {
+        input.classList.remove('filled');
+      }
+    });
+
+    if (!formIsValid) {
+      event.preventDefault(); // Prevent form submission if invalid
     }
+  });
+
+  inputs.forEach((input) => {
+    input.addEventListener('focus', () => {
+      input.classList.add('filled');
+    });
+
+    input.addEventListener('blur', () => {
+      if (!input.value.trim()) {
+        input.classList.remove('filled');
+      }
+    });
+  });
 });
+
+
+
+
+
