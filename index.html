@@ -75,9 +75,9 @@
 
             <div class="form-group">
                 <select id="country" required>
-                    <option value="IN">India</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
+                    <option class="country-select" value=""></option>
+                    <option class="country-select" value="US">United States</option>
+                    <option class="country-select" value="CA">Canada</option>
                 </select>
                 <label for="country">Country</label>
                 <div class="error-message"></div>
@@ -238,12 +238,23 @@
                 </ul>
             </div>
             <div class="video-container">
-                <img src="/Public/Images/Group44.png" alt="Video Thumbnail">
+                <img onclick="openVideo()" src="/Public/Images/Group44.png" alt="Video Thumbnail">
                 <!-- <img src="https://via.placeholder.com/600x400" alt="Video Thumbnail"> -->
-                <div class="play-button" onclick="openVideo()">
+                <div onclick="openVideo()">
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                     </svg> -->
+                </div>
+            </div>
+            <!-- Hidden Video Modal -->
+            <div id="videoModal" class="video-modal" style="display: none;">
+                <div class="video-wrapper">
+                    <video id="videoPlayer" controls>
+                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                            type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="close-button" onclick="closeVideo()">Close</button>
                 </div>
             </div>
         </div>

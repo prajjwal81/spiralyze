@@ -184,16 +184,23 @@ services.forEach((service) => {
   serviceGrid.appendChild(card);
 });
 
-// function openVideo() {
-//   document.getElementById("videoOverlay").style.display = "flex";
-//   document.getElementById("videoPlayer").play();
-// }
+function openVideo() {
+  const videoModal = document.getElementById('videoModal');
+  const videoPlayer = document.getElementById('videoPlayer');
 
-// function closeVideo() {
-//   document.getElementById("videoOverlay").style.display = "none";
-//   document.getElementById("videoPlayer").pause();
-//   document.getElementById("videoPlayer").currentTime = 0;
-// }
+  videoModal.style.display = 'block'; // Show the modal
+  videoPlayer.play(); // Start the video
+}
+
+function closeVideo() {
+  const videoModal = document.getElementById('videoModal');
+  const videoPlayer = document.getElementById('videoPlayer');
+
+  videoModal.style.display = 'none'; // Hide the modal
+  videoPlayer.pause(); // Pause the video
+  videoPlayer.currentTime = 0; // Reset the video
+}
+
 
 // const inputField = document.getElementById('inputField');
 // const inputContainer = document.getElementById('inputContainer');
